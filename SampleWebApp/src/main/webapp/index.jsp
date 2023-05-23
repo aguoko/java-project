@@ -2,7 +2,7 @@
   <head>
     <title>Welcome to Agunigbo Java Project 2023</title>
   </head>
-  <body bgcolor="#7FFF00">
+  <body bgcolor="#42d4f5">
     <h1>Hello Mr Uchenna Oko welcome to Agunigbo Active Testing Laboratory (An Okunano d' Ebube)</h1>
     <h2> No time to check time</h2>
     <!--Form declaration. Must have an action attribute -->
