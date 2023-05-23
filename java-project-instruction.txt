@@ -1,0 +1,24 @@
+Integrate the github repo with the Jenkins server, so that whenever there update in the github repo Jenkins will pick and run it through the pipeline stages and deploy the app to webserver.
+1.	Copy and paste the Jenkins ip address to login into Jenkins and then install Jenkins dependencies.
+2.	Configure role permission for tomcat cus you need to integrate tomcat with Jenkins.
+3.	SSH into tomcat server 
+4.	Check with the installation instruction attached to this under tomcat9 where you have “enter this code” copy the code and goto the Tomcat that you have SSH into before pasting the code do step (5) to open the configuration file to paste it in
+5.	sudo vim /var/lib/tomcat9/conf/tomcat-users.xml
+6.	paste the code copied in step (4), note down the username and password
+to integrate with Jenkins and continue your build
+1.	goto manage plugins in Jenkins > install “maven” 
+2.	install plugin that will interact with the tomcat server > install “deploy to container” which allow you to deploy a ‘war file’ to a container after a successful build.
+3.	Goto manage Jenkins > global tool configuration > maven>add>name>untick automatic installation cus we have already installed it when we ran the Jenkins installation. > MAVEN_HOME -- you need to put maven path. To get that go to ur server type “mvn –version” copy the path and go and paste it in the Jenkins you are configuring (i.e paste the path into MAVEN_HOME). 
+4.	Then apply and save.
+Create job and integrate with github repo
+1.	Create new job in Jenkins
+2.	Generate pipeline syntax for the tomcat deployment
+3.	In the pipeline syntax > select deploy war 
+4.	Put “***/*.war” at the WAR/EAR files i.e that’s
+5.	Context path – that’s while you want to expose the java application you built
+6.	Containers: > select the tomcat version you installed
+7.	Credentials > add the password and username that you created during the installation of tomcat server. 
+8.	Copy and paste the tomcat url
+9.	Generate pipeline script
+10.	Goto jenkinsfile and paste the pipeline script generated
+11.	After build now check it out by attaching the context path (eg. Webapp) behind the tomcat URL
