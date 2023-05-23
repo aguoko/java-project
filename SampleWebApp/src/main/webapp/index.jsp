@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Uchenna Okoh (Odogwu Bournemouth) you are highly welcome to Agunigbo Java Project 2023</title>
+    <title>Welcome to Agunigbo Java Project 2023 Mr Uchenna Oko</title>
   </head>
   <body bgcolor="#7FFF00">
     <h1>Hello from Okougwuujam Nwangene Active Testing Laboratory (An Okunano d' Ebube)</h1>
